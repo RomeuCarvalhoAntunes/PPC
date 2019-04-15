@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+
+  int m,n;
+
+  std::cin >> m>> n;
+
+  std::cout << (m*n)/2 << '\n';
+
+  return 0;
+}
