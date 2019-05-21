@@ -4,20 +4,22 @@ using namespace std;
 
 int main(){
 
-  long long n1,n2,n3;
+  int n1,n2,n3;
 
-  long long a,b,c;
+  int a,b,c;
+  int valor;
 
   cin >> n1 >> n2 >> n3;
 
 
-  do {
-  
-  } while(a <= 0 || b <= 0);
 
+    b = sqrt((n1*n3)/n2);
+    a = sqrt((n3*n2)/n1);
+    c = sqrt((n1*n2)/n3);
 
+    valor = 4*a+4*b+4*c;
 
-  std::cout << a << " " << b << " " << c << '\n';
+    std::cout << valor << '\n';
 
 
 

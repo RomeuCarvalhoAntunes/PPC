@@ -4,18 +4,19 @@ using namespace std;
 
 int main(){
 
-  int tamanhoFila;
-  int quantidadeDoces;
-  int tantoBala;
-  std::vector<pair<int,int>> v;
+  int pessoas;
+  int balasDadas;
+  int quantidadeBalas
+  std::vector<int, int> balas;
 
-  for(int i=0; i<tamanhoFila; i++){
-    cin>>tantoBala;
-    v.insert(make_pair(tantoBala,i));
+  cin >> pessoas;
+
+  for(int i=0; i<quantidadeBalas; i++){
+    cin >> quantidadeBalas;
+    balas.push_back(make_pair(quantidadeBalas,i));
   }
 
-  for(i=0; i<tamanhoFila; i++){
+  
 
-  }
   return 0;
 }

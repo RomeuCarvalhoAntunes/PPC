@@ -4,45 +4,46 @@ using namespace std;
 
 int main(){
 
-  vector<pair <int, int>> v;
-  int quantidade;
-  int aux;
-  int idx1, idx2;
-  int resultado;
+  int quantidadeSoldados;
+  std::vector<int> alturas;
+  int aux = 0;
   int menor = 1000000000;
+  int idx1 =0 ;
+  int idx2 = 0;
+  int diferenca = 0;
 
+  cin >> quantidadeSoldados;
 
-  idx1 = 0;
-  idx2 = 0;
-  cin >> quantidade;
-  for(int i=0; i<quantidade; i++){
+  for(int i=0; i<quantidadeSoldados; i++){
     cin >> aux;
-    v.push_back(make_pair(aux,i));
+    alturas.push_back(aux);
   }
 
-  sort(v.begin(),v.end());
-
-  for(int i=0; i<quantidade; i++){
-    if(v[i].second == quantidade-1){
-      resultado = v[i].first - v[0].first;
-      if(resultado <=menor){
-        menor = resultado;
-        idx1 = v[i].second;
-        idx2 = v[0]. second;
-        std::cout << idx1+1 << " " << idx2+1 << '\n';
-        return 0;
-      }
+  for(int i=0; i<quantidadeSoldados; i++){
+    if(i == quantidadeSoldados-1){
+      break;
     } else {
-      resultado = v[i+1].first - v[i].first;
-      if (resultado < menor) {
-        menor = resultado;
-        idx1 = v[i+1].second;
-        idx2 = v[i].second;
+      diferenca = abs(alturas[i+1] - alturas[i]);
+      if(diferenca < menor){
+        idx1 = i;
+        idx2 = i+1;
+        menor = diferenca;
       }
     }
   }
 
-  std::cout << idx1+1 << " " << idx2+1<< '\n';
+  int verifica;
+
+  verifica = abs(alturas[quantidadeSoldados-1] - alturas[0]);
+  if(verifica < menor){
+    idx1 = quantidadeSoldados;
+    idx2 = 1;
+    std::cout << idx1 << " " << idx2 << '\n';
+
+  } else {
+    std::cout << idx1+1 << " " << idx2+1 << '\n';
+  }
+
 
   return 0;
 }

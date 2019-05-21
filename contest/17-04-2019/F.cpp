@@ -4,33 +4,27 @@ using namespace std;
 
 int main(){
 
+  int quantidadeAmigos;
+  int dedos;
+  int soma=0;
 
-  std::vector<pair<int,int>> v;
-  int quantidade;
-  int necessidadeBalas;
-  int menosBalas;
+  cin >> quantidadeAmigos;
 
-  cin >> quantidade;
-  cin >> necessidadeBalas;
-
-  for(int i=0; i<quantidade; i++){
-      cin >> necessidadeBalas;
-      v.push_back(make_pair(necessidadeBalas, i));
+  for(int i=0; i<quantidadeAmigos; i++){
+    std::cin >> dedos;
+    soma += dedos;
   }
 
-  int j=0;
+  int possibilidades=0;
 
-  do {
-
-    sort(v.begin(),v.end());
-    if(v[j].first<=0){
-
+  for(int i=1; i<=5; i++){
+    if((soma+i)%(quantidadeAmigos+1) == 1){
+      // nap pode
+    } else {
+        possibilidades++;
     }
-    j++;
-  } while(v.size()!=1);
+  }
 
-  std::cout << v[0].first << '\n';
-  std::cout << v[0].second+1 << '\n';
-
+  std::cout << possibilidades << '\n';
   return 0;
 }
