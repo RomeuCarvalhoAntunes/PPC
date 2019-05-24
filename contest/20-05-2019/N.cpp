@@ -4,27 +4,25 @@ using namespace std;
 
 int main(){
 
-  string entrada;
-  int soma=0;
-  int valor=0;
-  int somaparcial=0;
 
-  cin >>  entrada;
+  string entrada;
+  int aux=0;
+  int 
+  int perfect = 10;
+  int resultado= 0;
+
+  cin >> entrada;
 
   for(int i=0; i<entrada.length(); i++){
-    somaparcial = entrada[i];
-    soma = soma + somaparcial;
+    aux = stoi(entrada[i]);
   }
 
-  std::cout << entrada[0] << '\n';
 
-  valor = 10 - soma;
+  resultado = perfect - aux;
 
-  if(valor == 0){
-    // nothing
-  } else {
-    std::cout << entrada + to_string(valor) << '\n';
-  }
+
+  std::cout << entrada + to_string(resultado) << '\n';
+
 
 
   return 0;
