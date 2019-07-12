@@ -1,9 +1,9 @@
 s = str(input())
-
+ 
 ans = ''
-
+ 
 i = 0
-
+ 
 while i<len(s):
     if s[i] != '.':
         try:
@@ -19,7 +19,7 @@ while i<len(s):
             pass
     else:
         ans += '0'
-
+ 
     i+=1
-
+ 
 print(ans)

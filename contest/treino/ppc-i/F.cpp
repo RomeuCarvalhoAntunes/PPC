@@ -1,19 +1,22 @@
-#include <stdio.h>
-
+//TODO
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
 int main(){
     int m[3][3];
-
+ 
     for(int i = 0; i<5; i++){
         for(int j = 0; j<5; j++){
             m[i][j] = 1;
         }
     }
-
+ 
     for(int i = 0; i<3; i++){
         for(int j = 0; j<3; j++){
             int n;
-            scanf("%d", &n);
-
+            cin >> n;
+ 
             if(n&1){
                 for(int a = i-1; a<=i+1; a++){
                     for(int b = j-1; b<=j+1; b++){
@@ -35,13 +38,13 @@ int main(){
             }
         }
     }
-
+ 
     for(int i = 0; i<3; i++){
         for(int j = 0; j<3; j++){
             printf("%d", m[i][j]);
         }
         printf("\n");
     }
-
+ 
     return 0;
 }
